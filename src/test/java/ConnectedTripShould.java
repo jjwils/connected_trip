@@ -1,11 +1,13 @@
 import org.junit.jupiter.api.Test;
+import org.mockito.Mock;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class ConnectedTripShould {
 
-
+    @Mock
+    GridNavigator gridNavigator;
 
     @Test
     public void one_equal_one () throws Exception{
@@ -14,6 +16,6 @@ public class ConnectedTripShould {
 
     @Test
     public void driverA(){
-        assertTrue();
+        assertTrue(gridNavigator.passanger());
     }
 }
