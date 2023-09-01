@@ -1,0 +1,12 @@
+
+®
+java:S3577"’Rename class "ConnectedTripShould" to match the regular expression: '^((Test|IT)[a-zA-Z0-9_]+|[A-Z][a-zA-Z0-9_]*(Test|Tests|TestCase|IT|ITCase))$'(“¿à›øÿÿÿÿ
+9
+java:S5786
+"Remove this 'public' modifier.(ÂãÝèüÿÿÿÿ
+9
+java:S5786"Remove this 'public' modifier.(“¿à›øÿÿÿÿ
+H
+java:S3415"2Change this assertion to not compare two literals.(¦ç¶˜
+a
+java:S5863"KReplace this assertion to not have the same actual and expected expression.(¦ç¶˜
