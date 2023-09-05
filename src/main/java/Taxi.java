@@ -1,8 +1,11 @@
 public class Taxi {
+    boolean isPassengerOnBoard;
+
     public boolean passengerOnBoard() {
-        return false;
+        return isPassengerOnBoard;
     }
 
-    public void passengerOnBoard(boolean b) {
+    public void passengerOnBoard(boolean isPassengerOnBoard) {
+        this.isPassengerOnBoard = isPassengerOnBoard;
     }
 }

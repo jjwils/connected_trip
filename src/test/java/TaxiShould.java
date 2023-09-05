@@ -26,4 +26,11 @@ public class TaxiShould {
         //assert
         assertTrue(taxi.passengerOnBoard());
     }
+
+    @Test
+    void unload_passenger() {
+        Taxi taxi = new Taxi();
+        taxi.passengerOnBoard(false);
+        assertTrue(taxi.passengerOnBoard());
+    }
 }
