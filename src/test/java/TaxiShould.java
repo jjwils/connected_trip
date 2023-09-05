@@ -18,7 +18,12 @@ public class TaxiShould {
 
     @Test
     void have_passenger() {
+        //arrange
         Taxi taxi = new Taxi();
+
+        //act
+        taxi.passengerOnBoard(true);
+        //assert
         assertTrue(taxi.passengerOnBoard());
     }
 }

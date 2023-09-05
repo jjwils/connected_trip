@@ -1,5 +1,8 @@
 public class Taxi {
     public boolean passengerOnBoard() {
-        return true;
+        return false;
+    }
+
+    public void passengerOnBoard(boolean b) {
     }
 }
