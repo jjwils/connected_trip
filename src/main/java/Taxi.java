@@ -1,8 +1,6 @@
 public class Taxi {
     boolean isPassengerOnBoard;
 
-    boolean hasDestination;
-    private String destinationName;
 
     public boolean passengerOnBoard() {
         return isPassengerOnBoard;
@@ -16,12 +14,7 @@ public class Taxi {
         this.isPassengerOnBoard = true;
     }
 
-    public boolean hasDestination() {
-        return hasDestination;
-    }
-
-    public void setDestinationName(String destinationName){
-        this.destinationName = destinationName;
-        this.hasDestination = true;
+    public String position() {
+        return "0,0";
     }
 }

@@ -1,15 +1,22 @@
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.when;
 
 public class TaxiShould {
 
+    private Taxi taxi;
+
+    @BeforeEach
+    void setup() {
+        taxi = new Taxi();
+    }
+
     @Test
     void not_have_passenger_when_created() {
         // Arrange
-        Taxi taxi = new Taxi();
+
 
         // Assert
         assertFalse(taxi.passengerOnBoard());
@@ -18,7 +25,7 @@ public class TaxiShould {
     @Test
     void have_passenger() {
         //arrange
-        Taxi taxi = new Taxi();
+
         //act
         taxi.loadPassenger();
         //assert
@@ -28,7 +35,7 @@ public class TaxiShould {
     @Test
     void unload_passenger() {
         //arrange
-        Taxi taxi = new Taxi();
+
         taxi.loadPassenger();
 
         //act
@@ -39,9 +46,14 @@ public class TaxiShould {
     }
 
     @Test
-    void has_destination(){
-        Taxi taxi = new Taxi();
-        when(taxi.hasDestination()).thenReturn(true);
-        assertTrue(taxi.hasDestination());
+    void has_current_position() {
+        //arrange
+
+        //act
+
+
+        //assert
+        assertEquals("0,0", taxi.position());
     }
+
 }
