@@ -5,7 +5,11 @@ public class Taxi {
         return isPassengerOnBoard;
     }
 
-    public void passengerOnBoard(boolean isPassengerOnBoard) {
-        this.isPassengerOnBoard = isPassengerOnBoard;
+    public void unloadPassenger(){
+        this.isPassengerOnBoard = false;
+    }
+
+    public void loadPassenger() {
+        this.isPassengerOnBoard = true;
     }
 }

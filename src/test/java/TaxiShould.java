@@ -6,11 +6,9 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class TaxiShould {
 
     @Test
-    void not_have_passenger() {
+    void not_have_passenger_when_created() {
         // Arrange
         Taxi taxi = new Taxi();
-
-        // Act
 
         // Assert
         assertFalse(taxi.passengerOnBoard());
@@ -20,17 +18,22 @@ public class TaxiShould {
     void have_passenger() {
         //arrange
         Taxi taxi = new Taxi();
-
         //act
-        taxi.passengerOnBoard(true);
+        taxi.loadPassenger();
         //assert
         assertTrue(taxi.passengerOnBoard());
     }
 
     @Test
     void unload_passenger() {
+        //arrange
         Taxi taxi = new Taxi();
-        taxi.passengerOnBoard(false);
-        assertTrue(taxi.passengerOnBoard());
+        taxi.loadPassenger();
+
+        //act
+        taxi.unloadPassenger();
+
+        //assert
+        assertFalse(taxi.passengerOnBoard());
     }
 }
