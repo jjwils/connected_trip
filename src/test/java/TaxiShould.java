@@ -2,6 +2,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.mockito.Mockito.when;
 
 public class TaxiShould {
 
@@ -35,5 +36,12 @@ public class TaxiShould {
 
         //assert
         assertFalse(taxi.passengerOnBoard());
+    }
+
+    @Test
+    void has_destination(){
+        Taxi taxi = new Taxi();
+        when(taxi.hasDestination()).thenReturn(true);
+        assertTrue(taxi.hasDestination());
     }
 }
