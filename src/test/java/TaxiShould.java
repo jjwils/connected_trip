@@ -56,9 +56,10 @@ public class TaxiShould {
     @Test
     void showGridMeter() {
         //act
-
+        taxi.move("R");
+        taxi.move("R");
         //assert
-        assertNotNull(taxi.initialPosition()-taxi.finalPosition());
+        assertEquals(2,taxi.getGridMeter());
     }
 
 }

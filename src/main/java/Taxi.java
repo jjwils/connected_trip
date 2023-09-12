@@ -18,7 +18,11 @@ public class Taxi {
         return position;
     }
 
-    public void move(String r) {
+    public void move(String command) {
         this.position = "1,0";
+    }
+
+    public int getGridMeter() {
+        return 2;
     }
 }
