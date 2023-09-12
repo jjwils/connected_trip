@@ -1,7 +1,6 @@
 public class Taxi {
     boolean isPassengerOnBoard;
 
-
     public boolean passengerOnBoard() {
         return isPassengerOnBoard;
     }
