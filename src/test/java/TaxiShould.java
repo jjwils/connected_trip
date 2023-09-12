@@ -44,4 +44,11 @@ public class TaxiShould {
         assertEquals("0,0", taxi.position());
     }
 
+    @Test
+    void move_to_right() {
+        //act
+        taxi.move("R");
+        //assert
+    }
+
 }

@@ -16,4 +16,7 @@ public class Taxi {
     public String position() {
         return "0,0";
     }
+
+    public void move(String r) {
+    }
 }
