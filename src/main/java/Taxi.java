@@ -1,5 +1,6 @@
 public class Taxi {
     boolean isPassengerOnBoard;
+    String position;
 
     public boolean passengerOnBoard() {
         return isPassengerOnBoard;
@@ -18,5 +19,6 @@ public class Taxi {
     }
 
     public void move(String r) {
+        this.setPosition;
     }
 }
