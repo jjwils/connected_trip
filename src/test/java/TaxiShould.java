@@ -50,6 +50,8 @@ public class TaxiShould {
         taxi.move("R");
         //assert
         assertEquals("1,0", taxi.position());
+        assertEquals(1,taxi.getGridMeter());
+
 
     }
 
