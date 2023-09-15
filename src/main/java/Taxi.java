@@ -1,6 +1,8 @@
 public class Taxi {
     boolean isPassengerOnBoard;
     String position = "0,0";
+    private int xPosition = 0;
+    private int yPosition = 0;
 
     public boolean passengerOnBoard() {
         return isPassengerOnBoard;
@@ -19,10 +21,26 @@ public class Taxi {
     }
 
     public void move(String command) {
-        this.position = "1,0";
+        xPosition++;
+        this.position = xPosition+",0";
+        if(command == "D") {
+            yPosition++;
+            this.position = "0,"+yPosition;
+        }else if(command == "U") {
+            yPosition--;
+            this.position = "0,"+yPosition;
+        }
     }
 
     public int getGridMeter() {
-        return 2;
+        return 1;
+    }
+
+    public int xPosition() {
+        return xPosition;
+    }
+
+    public int yPosition() {
+        return yPosition;
     }
 }

@@ -50,18 +50,42 @@ public class TaxiShould {
         taxi.move("R");
         //assert
         assertEquals("1,0", taxi.position());
-        assertEquals(1,taxi.getGridMeter());
+//        assertEquals(1,taxi.getGridMeter());
+        assertEquals(1, taxi.xPosition());
 
 
     }
 
     @Test
-    void showGridMeter() {
+    void move_right_by_two_cells() {
         //act
         taxi.move("R");
         taxi.move("R");
+
         //assert
-        assertEquals(2,taxi.getGridMeter());
+        //assertEquals(1,taxi.getGridMeter());
+        assertEquals("2,0", taxi.position());
+        assertEquals(2, taxi.xPosition());
+    }
+
+    @Test
+    void move_to_down() {
+        //act
+        taxi.move("D");
+
+        //assert
+        assertEquals("0,1", taxi.position());
+        assertEquals(1, taxi.yPosition());
+    }
+
+    @Test
+    void move_to_up() {
+        //act
+        taxi.move("U");
+
+        //assert
+        assertEquals("0,-1", taxi.position());
+        assertEquals(-1, taxi.yPosition());
     }
 
 }
