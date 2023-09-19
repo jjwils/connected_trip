@@ -50,7 +50,6 @@ public class TaxiShould {
         taxi.move("R");
         //assert
         assertEquals("1,0", taxi.position());
-//        assertEquals(1,taxi.getGridMeter());
         assertEquals(1, taxi.xPosition());
 
 
@@ -63,7 +62,6 @@ public class TaxiShould {
         taxi.move("R");
 
         //assert
-        //assertEquals(1,taxi.getGridMeter());
         assertEquals("2,0", taxi.position());
         assertEquals(2, taxi.xPosition());
     }
@@ -79,12 +77,63 @@ public class TaxiShould {
     }
 
     @Test
+    void move_down_twice() {
+        //act
+        taxi.move("D");
+        taxi.move("D");
+
+        //assert
+        assertEquals("0,2", taxi.position());
+        assertEquals(2, taxi.yPosition());
+    }
+
+    @Test
     void move_to_up() {
         //act
         taxi.move("U");
 
         //assert
         assertEquals("0,-1", taxi.position());
+        assertEquals(-1, taxi.yPosition());
+    }
+
+    @Test
+    void move_up_twice() {
+        //act
+        taxi.move("U");
+        taxi.move("U");
+
+        //assert
+        assertEquals("0,-2", taxi.position());
+        assertEquals(-2, taxi.yPosition());
+    }
+
+    @Test
+    void move_to_left() {
+        //act
+        taxi.move("L");
+        //assert
+      assertEquals("-1,0", taxi.position());
+        assertEquals(-1, taxi.xPosition());
+    }
+    @Test
+    void move_to_left_twice() {
+        //act
+        taxi.move("L");
+        taxi.move("L");
+        //assert
+        assertEquals("-2,0", taxi.position());
+        assertEquals(-2, taxi.xPosition());
+    }
+
+    @Test
+    void move_to_left_up() {
+        //act
+        taxi.move("L");
+        taxi.move("U");
+        //assert
+        assertEquals("-1,-1", taxi.position());
+        assertEquals(-1, taxi.xPosition());
         assertEquals(-1, taxi.yPosition());
     }
 

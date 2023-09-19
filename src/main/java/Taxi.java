@@ -8,7 +8,7 @@ public class Taxi {
         return isPassengerOnBoard;
     }
 
-    public void unloadPassenger(){
+    public void unloadPassenger() {
         this.isPassengerOnBoard = false;
     }
 
@@ -21,20 +21,19 @@ public class Taxi {
     }
 
     public void move(String command) {
-        xPosition++;
-        this.position = xPosition+",0";
-        if(command == "D") {
+        if (command == "R") {
+            xPosition++;
+        } else if (command == "D") {
             yPosition++;
-            this.position = "0,"+yPosition;
-        }else if(command == "U") {
+        } else if (command == "U") {
             yPosition--;
-            this.position = "0,"+yPosition;
+        } else if (command == "L") {
+            xPosition--;
+
         }
+        this.position = xPosition + "," + yPosition;
     }
 
-    public int getGridMeter() {
-        return 1;
-    }
 
     public int xPosition() {
         return xPosition;
