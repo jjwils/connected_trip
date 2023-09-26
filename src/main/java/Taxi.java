@@ -21,15 +21,14 @@ public class Taxi {
     }
 
     public void move(String command) {
-        if (command == "R") {
+        if (command == CommandType.right()) {
             xPosition++;
-        } else if (command == "D") {
+        }else if (command == CommandType.down()) {
             yPosition++;
-        } else if (command == "U") {
+        }else if (command == CommandType.up()) {
             yPosition--;
-        } else if (command == "L") {
+        }else if (command == CommandType.left()) {
             xPosition--;
-
         }
         this.position = xPosition + "," + yPosition;
     }
