@@ -21,15 +21,15 @@ public class Taxi {
     }
 
     public void move(String command) {
-        if (command == Commands.R) {
-            xPosition++;
-        } else if (command == Commands.D) {
-            yPosition++;
-        } else if (command == Commands.U) {
-            yPosition--;
-        } else if (command == Commands.L) {
-            xPosition--;
+        move(Commands.valueOf(command));
+    }
 
+    public void move(Commands command) {
+        switch (command) {
+            case R -> xPosition++;
+            case D -> yPosition++;
+            case U -> yPosition--;
+            case L -> xPosition--;
         }
         this.position = xPosition + "," + yPosition;
     }
