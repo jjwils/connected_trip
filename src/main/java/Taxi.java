@@ -1,8 +1,4 @@
 public class Taxi {
-    public static final String R = "R";
-    public static final String D = "D";
-    public static final String U = "U";
-    public static final String L = "L";
     boolean isPassengerOnBoard;
     String position = "0,0";
     private int xPosition = 0;
@@ -25,13 +21,13 @@ public class Taxi {
     }
 
     public void move(String command) {
-        if (command == R) {
+        if (command == Commands.R) {
             xPosition++;
-        } else if (command == D) {
+        } else if (command == Commands.D) {
             yPosition++;
-        } else if (command == U) {
+        } else if (command == Commands.U) {
             yPosition--;
-        } else if (command == L) {
+        } else if (command == Commands.L) {
             xPosition--;
 
         }
